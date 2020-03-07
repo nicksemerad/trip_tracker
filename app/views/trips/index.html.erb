@@ -4,16 +4,9 @@
     <label>Which trip would you like to take?</label>
     <br>
     <br>
-    <select class="form">
-        <% @trips.each  do |l| %>
-        <option>
-        <button>
-          <p><%= link_to l.name, trip_locations_path(:trip_id)%>
-        </button>
-        </option>
+        <% @trips.each  do |t| %>
+          <p><%= link_to t.name, trip_locations_path(t.id)%>
         <%end%>  
-    </select>
-    <input />
   </div>
 </form>
 
