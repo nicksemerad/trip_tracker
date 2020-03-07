@@ -1,2 +1,13 @@
-<h1>Locations#index</h1>
-<p>Find me in app/views/locations/index.html.erb</p>
+<div class="container">
+  <h1 class="title">Trip Location</h1>
+    
+    <div class="record_container">
+      <% @locations.each do |l| %>
+      <div class="record">
+        <p><%= link_to l.city, trip_location_path(@trip, l.id)%></p>
+      </div>
+      <%end%>  
+    </div>
+    <%= link_to "Add an account", new_trip_location_path(@trip)%>
+  </div>
+    
