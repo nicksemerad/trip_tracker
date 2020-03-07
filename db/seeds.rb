@@ -4,6 +4,7 @@
  )
   3.times do
     location = Location.create(
+      name: Faker::Restaurant.name,
       city: Faker::Address.city,
       state: Faker::Address.state,
       trip_id: trip.id
