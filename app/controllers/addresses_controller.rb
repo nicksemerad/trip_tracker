@@ -54,11 +54,3 @@ before_action :set_address, only: [:show, :edit, :update, :destroy]
   end
 
 end
-
-
-
-# street:
-# city: 
-# state: 
-# zip:
-# location_id:
