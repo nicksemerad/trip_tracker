@@ -1,6 +1,6 @@
-<h1> Create New Location </h1>
+<h1> <%= @location.id ? 'Edit Location' : 'New Location'%> </h1>
 <br />
-<%= form_for ([@trip, @location]) do |a| %>
+<%= form_for [@trip, @location] do |a| %>
   <%= a.label :name%>
   <%= a.text_field :name, required: true%>
   <%= a.label :city%>
