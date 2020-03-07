@@ -2,7 +2,7 @@
   <h2 class="header">Trip Location</h2>    
     <div class="record_container">
 <ol>
-      <% @locations.each do |l| %>
+      <% @trip.locations.each do |l| %>
       <div class="record">
   <li>
         <p><%= link_to l.name, location_address_path(l, l.address)%></p>
