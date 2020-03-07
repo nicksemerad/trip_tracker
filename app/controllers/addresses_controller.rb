@@ -27,7 +27,7 @@ before_action :set_address, only: [:show, :edit, :update, :destroy]
   end
 
   def update
-    if @address.update
+    if @address.update(address_params)
       redirect_to [@location, @address]
     else
       render :edit
@@ -54,11 +54,3 @@ before_action :set_address, only: [:show, :edit, :update, :destroy]
   end
 
 end
-
-
-
-# street:
-# city: 
-# state: 
-# zip:
-# location_id:
