@@ -1,13 +1,15 @@
 <div>
-  <h2 class="header">Trip Location</h2>
-    
+  <h2 class="header">Trip Location</h2>    
     <div class="record_container">
+<ol>
       <% @locations.each do |l| %>
       <div class="record">
-        <p><%= link_to l.name, trip_location_path(@trip, l.id)%></p>
-        <p><%= link_to "Address", location_address_path(l, l.address)%></p>
+  <li>
+        <p><%= link_to l.name, location_address_path(l, l.address)%></p>
+  </li>      
       </div>
       <%end%>  
+</ol>
     </div>
     <%= link_to "Add a new location", new_trip_location_path(@trip)%>
   </div>
