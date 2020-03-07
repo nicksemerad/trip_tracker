@@ -1,5 +1,6 @@
 <h1> Create New Location </h1>
 <br />
+
 <%= form_for [@trip, @location] do |l| %>
 
       <%= l.label :name%>
@@ -13,3 +14,4 @@
 
   <%= l.submit %>
 <% end %>
+

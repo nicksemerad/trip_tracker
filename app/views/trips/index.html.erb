@@ -1,14 +1,14 @@
+<div class='container'>
 <h2 class='header'>Welcome to your Trip Tracker!</h2>
-<form>
+<p class='sub'>Which trip would you like to take?</p>
   <div class="form sub">
-    <label>Which trip would you like to take?</label>
     <br>
-    <br>
-        <% @trips.each  do |t| %>
-          <p><%= link_to t.name, trip_locations_path(t.id)%>
-        <%end%>  
+    <% @trips.each  do |t| %>
+      <p class='link'><%= link_to t.name, trip_locations_path(t.id)%></p>
+    <%end%>  
   </div>
-</form>
+</div>
+
 
 
 <style>
@@ -24,16 +24,29 @@
   
   .sub {
     text-align: center;
+    font-family: sans-serif;
   }
   
   .form {
-    text-align: center;
-    margin: 0.5em auto;
-    width: 70%; 
-    -webkit-appearance: none;
-    padding: 6px;
     outline: none;
     border-radius: 10px;
-    font-family: sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  
   }
+  
+  a { 
+    text-decoration: none; 
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background: #66CCCC;
+    height: 3.5em;
+    width: 5em;
+  }
+  
+  a:hover { background: lightblue; }
 </style>
