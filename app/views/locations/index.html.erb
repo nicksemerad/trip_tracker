@@ -5,6 +5,7 @@
       <% @locations.each do |l| %>
       <div class="record">
         <p><%= link_to l.name, trip_location_path(@trip, l.id)%></p>
+        <p><%= link_to "Address", location_address_path(l, l.address)%></p>
       </div>
       <%end%>  
     </div>
