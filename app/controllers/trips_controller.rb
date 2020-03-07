@@ -1,5 +1,4 @@
 class TripsController < ApplicationController
-  before_action :trip_params
   before_action :set_trip, only: [:show, :edit, :update, :destroy]
   
   def index
@@ -39,14 +38,14 @@ class TripsController < ApplicationController
   end 
 
   private 
+  def trip_params
+    params.require(:trip).permit(:name) 
+  end
 
   def set_trip
     @trip = Trip.find(params[:id])
   end
   
-  def trip_params
-    params.require(:trip).permit(:name) 
-  end
 
 end
 
