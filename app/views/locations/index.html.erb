@@ -4,10 +4,10 @@
     <div class="record_container">
       <% @locations.each do |l| %>
       <div class="record">
-        <p><%= link_to l.city, trip_location_path(@trip, l.id)%></p>
+        <p><%= link_to l.name, trip_location_path(@trip, l.id)%></p>
       </div>
       <%end%>  
     </div>
-    <%= link_to "Add an account", new_trip_location_path(@trip)%>
+    <%= link_to "Add a new location", new_trip_location_path(@trip)%>
   </div>
     
