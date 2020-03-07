@@ -26,7 +26,7 @@ class TripsController < ApplicationController
 
   def update 
     if @trip.update(trip_params) 
-      redirect_to @trip
+      redirect_to trip_path
     else
       render :edit 
     end
@@ -34,7 +34,7 @@ class TripsController < ApplicationController
 
   def destroy 
     @trip.destroy
-    redirect_to root_path
+    redirect_to trips_path
   end 
 
   private 
@@ -43,6 +43,7 @@ class TripsController < ApplicationController
   end
 
   def set_trip
+    # binding.pry
     @trip = Trip.find(params[:id])
   end
   

@@ -1,2 +1,8 @@
-<h1>Locations#edit</h1>
-<p>Find me in app/views/locations/edit.html.erb</p>
+<h1> Edit Location </h1>
+<br />
+<%= form_for ([@trip, @location]) do |a| %>
+  <%= a.label :name%>
+  <%= a.text_field :name, required: true%>
+  
+  <%= a.submit %>
+<% end %>

@@ -4,14 +4,17 @@
     <br>
     <ol>
       <% @trip.locations.each do |l| %>
-        <div class="record">
-          <li>
-            <p><%= link_to l.name, location_address_path(l, l.address)%></p>
-          </li>
-        </div>
-      <%end%>
-    </ol>
+      <div class="record">
+  <li>
+        <p><%= link_to l.name, location_address_path(l, l.address)%></p>
+  </li>      
+      </div>
+      <%end%>  
+</ol>
+    </div>
   </div>
+  <%= link_to "Add a new location", new_trip_location_path(@trip)%>
+  <%= link_to 'Delete Location', [@trip, @location], method: :delete %>
   <%= link_to "Add a new location", new_trip_location_path(@trip)%>
 </div>
 
@@ -40,6 +43,4 @@
   a:hover { background: lightblue; }
   
   li { padding: 2px; }
-  
-  
 </style>

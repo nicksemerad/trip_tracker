@@ -1,2 +1,15 @@
-<h1>Trips#show</h1>
-<p>Find me in app/views/trips/show.html.erb</p>
+
+
+<%= @trip.name %>
+
+<%= link_to 'Create a new trip', new_trip_path %>
+  
+<br />
+
+<%= link_to 'Edit Trip', edit_trip_path(@trip) %>
+<br />
+
+<%= link_to 'Delete Trip', @trip, method: :delete %>
+
+<br />
+<h1><%= link_to 'Home', root_path	 %><h1>
