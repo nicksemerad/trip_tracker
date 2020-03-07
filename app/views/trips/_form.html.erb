@@ -1,4 +1,4 @@
-<h1><%= @trip ? 'Edit Your Trip' : 'Create New Trip' %></h1>
+<h1><%= @trip.id ? 'Edit Your Trip' : 'Create New Trip' %></h1>
 <br />
 <%= form_for @trip do |f| %>
 <%= f.label :name %>
