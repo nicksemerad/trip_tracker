@@ -1,12 +1,17 @@
 <h1> Create New Location </h1>
 <br />
-<%= form_for ([@trip, @location]) do |a| %>
-  <%= a.label :name%>
-  <%= a.text_field :name, required: true%>
-  <%= a.label :city%>
-  <%= a.text_field :city, required: true%>
-  <%= a.label :state%>
-  <%= a.text_field :state, required: true%>
-  <%= a.label :zip, required: true%>
-  <%= a.submit %>
+
+<%= form_for [@trip, @location] do |l| %>
+
+      <%= l.label :name%>
+      <%= l.text_field :name, required: true%>
+
+      <%= l.label :city%>
+      <%= l.text_field :city, required: true%>
+
+      <%= l.label :state%>
+      <%= l.text_field :state, required: true%>
+
+  <%= l.submit %>
 <% end %>
+
