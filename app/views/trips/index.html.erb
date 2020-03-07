@@ -1,26 +1,31 @@
 <h2 class='header'>Welcome to your Trip Tracker!</h2>
 <form>
   <div class="form sub">
-    <label>Where would you like to go?</label>
+    <label>Which trip would you like to take?</label>
     <br>
     <br>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>placeholder</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+    <select class="form">
+        <% @trips.each  do |l| %>
+        <option>
+        <button>
+          <p><%= link_to l.name, trip_locations_path(:trip_id)%>
+        </button>
+        </option>
+        <%end%>  
     </select>
-  </div>
-  <div class="form">
-    <label for="exampleFormControlTextarea1">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <input />
   </div>
 </form>
 
 <style>
   .header {
     text-align: center;
+    background: #66CCCC;
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+    margin: 0;
+    font-family: sans-serif;
   }
   
   .sub {
@@ -28,6 +33,13 @@
   }
   
   .form {
-    
+    text-align: center;
+    margin: 0.5em auto;
+    width: 70%; 
+    -webkit-appearance: none;
+    padding: 6px;
+    outline: none;
+    border-radius: 10px;
+    font-family: sans-serif;
   }
 </style>
